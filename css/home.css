@@ -1,3 +1,5 @@
+/* Banner Slideshow */
+
 #home-banner-container img {
 	object-fit: cover;
 	width: 100vw;
@@ -58,4 +60,28 @@
 }
 #banner-image-3 {
 	-webkit-animation-delay: -4s;
+}
+
+/* Section Dividers */
+
+.section-divider {
+	margin: 40px 0;
+}
+
+.section-divider-header {
+	width: 200px;
+	padding: 6px 0;
+	margin: 0 auto;
+	position: relative;
+	
+	border: 1pt solid var(--purple);
+	border-radius: 25px;
+	background-color: white;
+}
+
+.horizontal-line {
+	height: 1px;
+	background-color: var(--purple);
+	transform: translateY(20px);
+	z-index: 1;
 }
