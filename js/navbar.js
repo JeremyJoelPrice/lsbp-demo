@@ -8,10 +8,9 @@ ajaxUtils.sendRequest("../html/navbar.html", (html) => {
 	assignNavbarButtonListeners();
 	setHomeButtonActive();
 	ajaxUtils.sendRequest("../html/home.html", displayHtml);
+	// load the home snippet
+	loadSnippet("home");
 });
-
-// load the home snippet
-loadSnippet("home");
 
 function assignHamburgerListeners() {
 	// nav menu toggle when user clicks hamburger icon

@@ -1,0 +1,61 @@
+#home-banner-container img {
+	object-fit: cover;
+	width: 100vw;
+	height: 350px;
+}
+
+#home-banner-container {
+	display: grid;
+}
+
+#home-banner-container img {
+	grid-column: 1;
+	grid-row: 1;
+	animation-name: fade;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
+}
+
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	53% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	53% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#banner-image-1 {
+}
+#banner-image-2 {
+	-webkit-animation-delay: -8s;
+}
+#banner-image-3 {
+	-webkit-animation-delay: -4s;
+}

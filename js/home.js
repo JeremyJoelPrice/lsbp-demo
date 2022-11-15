@@ -1,3 +1,5 @@
+import { displayHtml } from "./ajax-utility.js";
+
 export const homeScript = () => {
-	console.log("say cheese");
+	// displayNextBanner();
 };
