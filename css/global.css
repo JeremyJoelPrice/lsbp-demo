@@ -14,3 +14,11 @@
 	text-decoration: none;
 	color: var(--purple);
 }
+
+h1 {}
+
+h2 {
+	font-size: 22pt;
+}
+
+h3 {}

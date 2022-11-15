@@ -108,3 +108,10 @@
 		transition: 0.2s;
 	}
 }
+
+@media (max-width: 768px) {
+	
+	#title-text {
+		font-size: 18pt;
+	}
+}

@@ -1,4 +1,5 @@
 import { ajaxUtils, displayHtml } from "./ajax-utility.js";
+import { homeScript } from "./home.js";
 
 // load the navbar
 ajaxUtils.sendRequest("../html/navbar.html", (html) => {
@@ -8,6 +9,9 @@ ajaxUtils.sendRequest("../html/navbar.html", (html) => {
 	setHomeButtonActive();
 	ajaxUtils.sendRequest("../html/home.html", displayHtml);
 });
+
+// load the home snippet
+loadSnippet("home");
 
 function assignHamburgerListeners() {
 	// nav menu toggle when user clicks hamburger icon
@@ -31,15 +35,10 @@ function assignHamburgerListeners() {
 }
 
 function assignNavbarButtonListeners() {
-	// add onclick to each navbar button
 	getNavbarButtons().forEach((button) => {
 		button.addEventListener("click", (event) => {
 			setAsOnlyActiveButton(button);
-
-			const destination = event.target.innerText.toLowerCase();
-			ajaxUtils.sendRequest(`../html/${destination}.html`, (html) => {
-				displayHtml(html);
-			});
+			loadSnippet(event.target.innerText.toLowerCase());
 		});
 	});
 }
@@ -61,4 +60,20 @@ function setAsOnlyActiveButton(clickedButton) {
 
 function getNavbarButtons() {
 	return [...document.getElementsByClassName("navbar-button")];
+}
+
+function loadSnippet(page) {
+	ajaxUtils.sendRequest(`../html/${page}.html`, (html) => {
+		displayHtml(html);
+		getPageLoadScript(page)();
+	});
+}
+
+function getPageLoadScript(page) {
+	switch (page) {
+		case "home":
+			return homeScript;
+		default:
+			return () => {};
+	}
 }
