@@ -1,3 +1,5 @@
+import { homeScript } from "./home.js";
+
 export const ajaxUtils = {};
 
 ajaxUtils.sendRequest = (url, callback) => {
@@ -32,3 +34,28 @@ function handleResponse(request, callback) {
 export const displayHtml = (html, targetElement="#main-destination") => {
 	document.querySelector(targetElement).innerHTML = html;
 };
+
+export function loadSnippet(page) {
+	ajaxUtils.sendRequest(`../html/${page}.html`, (html) => {
+		displayHtml(html);
+		getPageLoadScript(page)();
+	});
+}
+
+export function getPageLoadScript(page) {
+	switch (page) {
+		case "home":
+			return homeScript;
+		default:
+			return () => {};
+	}
+}
+
+export function getElementsOfClass(className) {
+	return [...document.getElementsByClassName(className)];
+}
+
+export function getFirstElementOfClass(className) {
+	const elements = [...document.getElementsByClassName(className)];
+	return elements[0];
+}

@@ -1,5 +1,4 @@
-import { ajaxUtils, displayHtml } from "./ajax-utility.js";
-import { homeScript } from "./home.js";
+import { ajaxUtils, displayHtml, getElementsOfClass, getFirstElementOfClass, loadSnippet } from "./ajax-utility.js";
 
 // load the navbar
 ajaxUtils.sendRequest("../html/navbar.html", (html) => {
@@ -61,29 +60,4 @@ function setAsOnlyActiveButton(clickedButton) {
 			button.classList.add("navbar__button--active");
 		}
 	});
-}
-
-function loadSnippet(page) {
-	ajaxUtils.sendRequest(`../html/${page}.html`, (html) => {
-		displayHtml(html);
-		getPageLoadScript(page)();
-	});
-}
-
-function getPageLoadScript(page) {
-	switch (page) {
-		case "home":
-			return homeScript;
-		default:
-			return () => {};
-	}
-}
-
-function getElementsOfClass(className) {
-	return [...document.getElementsByClassName(className)];
-}
-
-function getFirstElementOfClass(className) {
-	const elements = [...document.getElementsByClassName(className)];
-	return elements[0];
 }
