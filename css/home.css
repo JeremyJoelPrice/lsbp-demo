@@ -1,19 +1,17 @@
 /* Slideshow */
 
-.home-slideshow__container img {
-	object-fit: cover;
-	width: 100vw;
-	height: 350px;
-}
-
 .home-slideshow__container {
 	display: grid;
-	height: 10px;
 }
 
 .home-slideshow__image {
 	grid-column: 1;
 	grid-row: 1;
+
+	object-fit: cover;
+	width: 100vw;
+	height: 350px;
+
 	animation-name: fade;
 	animation-iteration-count: infinite;
 	animation-duration: 12s;
@@ -85,5 +83,4 @@
 	height: 1px;
 	background-color: var(--purple);
 	transform: translateY(20px);
-	z-index: 1;
 }
