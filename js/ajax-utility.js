@@ -36,6 +36,9 @@ export const displayHtml = (html, targetElement="#main-destination") => {
 };
 
 export function loadSnippet(page) {
+	if (page !== "home") {
+		page = "business-card";
+	}
 	ajaxUtils.sendRequest(`../html/${page}.html`, (html) => {
 		displayHtml(html);
 		getPageLoadScript(page)();
