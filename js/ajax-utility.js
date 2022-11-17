@@ -29,6 +29,6 @@ function handleResponse(request, callback) {
 	}
 }
 
-export const displayHtml = (html, targetElement="#main") => {
+export const displayHtml = (html, targetElement="#main-destination") => {
 	document.querySelector(targetElement).innerHTML = html;
 };

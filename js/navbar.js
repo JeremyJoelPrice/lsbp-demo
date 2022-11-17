@@ -3,7 +3,7 @@ import { homeScript } from "./home.js";
 
 // load the navbar
 ajaxUtils.sendRequest("../html/navbar.html", (html) => {
-	displayHtml(html, "#navbar-placeholder");
+	displayHtml(html, "#navbar-destination");
 	assignHamburgerListeners();
 	assignNavbarButtonListeners();
 	setHomeButtonActive();
@@ -14,27 +14,32 @@ ajaxUtils.sendRequest("../html/navbar.html", (html) => {
 
 function assignHamburgerListeners() {
 	// nav menu toggle when user clicks hamburger icon
-	document.querySelector("#hamburger-menu").addEventListener("click", () => {
-		document
-			.querySelector("#navbar-buttons-container")
-			.classList.toggle("active");
-	});
+	getFirstElementOfClass("navbar__hamburger-menu").addEventListener(
+		"click",
+		() => {
+			getFirstElementOfClass(
+				"navbar__buttons-container"
+			).classList.toggle("navbar__buttons-container--active");
+		}
+	);
 
 	// nav menu closes when user clicks away
 	window.addEventListener("click", (event) => {
 		if (
-			event.target.id !== "hamburger-menu" &&
-			event.target.parentElement?.id !== "hamburger-menu"
+			event.target.classList[0] !== "navbar__hamburger-menu" &&
+			event.target.parentElement?.classList[0] !==
+				"navbar__hamburger-menu"
 		) {
-			document
-				.querySelector("#navbar-buttons-container")
-				.classList.remove("active");
+			console.log("boom");
+			getFirstElementOfClass(
+				"navbar__buttons-container"
+			).classList.remove("navbar__buttons-container--active");
 		}
 	});
 }
 
 function assignNavbarButtonListeners() {
-	getNavbarButtons().forEach((button) => {
+	getElementsOfClass("navbar__button").forEach((button) => {
 		button.addEventListener("click", (event) => {
 			setAsOnlyActiveButton(button);
 			loadSnippet(event.target.innerText.toLowerCase());
@@ -43,22 +48,20 @@ function assignNavbarButtonListeners() {
 }
 
 function setHomeButtonActive() {
-	document.getElementById("home-button").classList.add("active");
+	getFirstElementOfClass("navbar__home-button").classList.add(
+		"navbar__home-button--active"
+	);
 }
 
 // utility functions
 function setAsOnlyActiveButton(clickedButton) {
-	getNavbarButtons().forEach((button) => {
+	getElementsOfClass("navbar__button").forEach((button) => {
 		if (button !== clickedButton) {
-			button.classList.remove("active");
+			button.classList.remove("navbar__button--active");
 		} else {
-			button.classList.add("active");
+			button.classList.add("navbar__button--active");
 		}
 	});
-}
-
-function getNavbarButtons() {
-	return [...document.getElementsByClassName("navbar-button")];
 }
 
 function loadSnippet(page) {
@@ -75,4 +78,13 @@ function getPageLoadScript(page) {
 		default:
 			return () => {};
 	}
+}
+
+function getElementsOfClass(className) {
+	return [...document.getElementsByClassName(className)];
+}
+
+function getFirstElementOfClass(className) {
+	const elements = [...document.getElementsByClassName(className)];
+	return elements[0];
 }

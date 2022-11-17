@@ -8,6 +8,21 @@
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 	float: left;
 }
+
+.content-column {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+}
+
+.content-square {
+
+}
+
+.content-rectangle {
+
+}
+
 .col-lg-1 {width: 8.33%;}
 .col-lg-2 {width: 16.66%;}
 .col-lg-3 {width: 25%;}
@@ -20,9 +35,6 @@
 .col-lg-10 {width: 83.33%;}
 .col-lg-11 {width: 91.66%;}
 .col-lg-12 {width: 100%;}
-.content-column {
-	max-width: 1200px;
-}
 
 /*Medium devices only*/
 @media (max-width: 1199px) {
