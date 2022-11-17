@@ -2,9 +2,6 @@
 
 #navbar {
 	display: flex;
-	justify-content: stretch;
-	margin-bottom: 15px;
-
 	background-color: var(--white);
 }
 
@@ -49,7 +46,6 @@
 
 #title-text {
 	font-size: 26pt;
-	font-weight: lighter;
 }
 
 .navbar-button:hover {
@@ -63,7 +59,7 @@
 	border-radius: 3px 3px 0 0;
 }
 
-/* Responsive Navbar */
+/* Hamburger Menu */
 
 #hamburger-menu {
 	display: none;
