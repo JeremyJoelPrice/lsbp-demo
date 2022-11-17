@@ -30,7 +30,6 @@ function assignHamburgerListeners() {
 			event.target.parentElement?.classList[0] !==
 				"navbar__hamburger-menu"
 		) {
-			console.log("boom");
 			getFirstElementOfClass(
 				"navbar__buttons-container"
 			).classList.remove("navbar__buttons-container--active");

@@ -3,6 +3,8 @@
 	--white: rgb(245, 245, 255);
 }
 
+/* Styles */
+
 * {
 	box-sizing: border-box;
 
@@ -26,4 +28,12 @@ h2 {
 h3 {
 	font-size: 16pt;
 	margin: 20px;
+}
+
+/* Containers */
+
+.content-column {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
 }
