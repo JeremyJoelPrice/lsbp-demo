@@ -1,16 +1,16 @@
-/* Banner Slideshow */
+/* Slideshow */
 
-#home-banner-container img {
+.home-slideshow__container img {
 	object-fit: cover;
 	width: 100vw;
 	height: 350px;
 }
 
-#home-banner-container {
+.home-slideshow__container {
 	display: grid;
 }
 
-#home-banner-container img {
+.home-slideshow__image {
 	grid-column: 1;
 	grid-row: 1;
 	animation-name: fade;
@@ -53,12 +53,12 @@
 	}
 }
 
-#banner-image-1 {
+.home-slidershow__image-1 {
 }
-#banner-image-2 {
+.home-slidershow__image-2 {
 	-webkit-animation-delay: -8s;
 }
-#banner-image-3 {
+.home-slidershow__image-3 {
 	-webkit-animation-delay: -4s;
 }
 
@@ -68,7 +68,7 @@
 	margin: 40px 0;
 }
 
-.section-divider-header {
+.section-divider__header {
 	width: 200px;
 	padding: 6px 0;
 	margin: 0 auto;
@@ -79,7 +79,7 @@
 	background-color: white;
 }
 
-.horizontal-line {
+.section-divider__horizontal-line {
 	height: 1px;
 	background-color: var(--purple);
 	transform: translateY(20px);
