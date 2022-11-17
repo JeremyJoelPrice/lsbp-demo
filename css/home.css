@@ -8,6 +8,7 @@
 
 .home-slideshow__container {
 	display: grid;
+	height: 10px;
 }
 
 .home-slideshow__image {
@@ -35,6 +36,7 @@
 		opacity: 0;
 	}
 }
+
 @keyframes fade {
 	0% {
 		opacity: 0;
@@ -53,12 +55,12 @@
 	}
 }
 
-.home-slidershow__image-1 {
+.home-slideshow__image-1 {
 }
-.home-slidershow__image-2 {
+.home-slideshow__image-2 {
 	-webkit-animation-delay: -8s;
 }
-.home-slidershow__image-3 {
+.home-slideshow__image-3 {
 	-webkit-animation-delay: -4s;
 }
 

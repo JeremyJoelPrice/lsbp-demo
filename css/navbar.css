@@ -18,6 +18,7 @@
 
 .navbar__buttons-container {
 	display: flex;
+	z-index: 1;
 }
 
 .navbar__button {
