@@ -69,8 +69,9 @@
 }
 
 .section-divider__header {
-	width: 200px;
-	padding: 6px 0;
+	min-width: 200px;
+	max-width: fit-content;
+	padding: 6px 15px;
 	margin: 0 auto;
 	position: relative;
 
@@ -87,19 +88,16 @@
 
 /* Containers */
 
-.diploma-training-card {
+.content-box__image--diploma-training {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 
 	background-image: url("../img/1F332280-6C5E-6F3B-A66D-F2141DF815A7.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
-.diploma-training-card__label {
+.diploma-training__label {
 	width: 60%;
 	height: 20%;
 	margin: 0 auto;
@@ -115,7 +113,7 @@
 	justify-content: space-around;
 }
 
-.diploma-training-card__label:hover {
+.diploma-training__label:hover {
 	cursor: pointer;
 }
 
@@ -163,4 +161,22 @@
 	background-color: var(--highlight);
 	box-shadow: 1px 1px black;
 	cursor: pointer;
+}
+
+.content-box__image--head-maassage {
+	background-image: url("../img/head\ massage\ person.png");
+	object-fit: cover;
+}
+
+.content-box__massage-links {
+	padding: 120px 100px;
+}
+
+.massage-card__button {
+	display: block;
+	margin: 30px auto;
+	width: 250px;
+	padding: 10px;
+	border: 2pt solid var(--highlight);
+	background-color: white;
 }

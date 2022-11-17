@@ -1,5 +1,6 @@
 :root {
 	--purple: rgb(47, 49, 141);
+	--light-purple: rgb(149, 127, 239);
 	--highlight: rgb(244, 158, 76);
 	--white: rgb(245, 245, 255);
 
@@ -55,6 +56,10 @@
 	cursor: pointer;
 }
 
+.link:hover {
+	cursor: pointer;
+}
+
 /* Containers */
 
 .content-column {
@@ -70,10 +75,23 @@
 }
 
 .content-box {
-	height: 300px;
+	min-height: 300px;
 	width: 500px;
 	margin: 50px;
 	border: 1pt solid var(--purple);
+}
+
+.content-box--large {
+	width: 800px;
+	height: 600px;
+}
+
+.content-box__image {
+	height: 100%;
+	background-image: url("../img/head\ massage\ person.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @media (max-width: 1199px) {
