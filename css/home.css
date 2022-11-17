@@ -105,6 +105,7 @@
 	margin: 0 auto;
 
 	box-shadow: 1px 1px black;
+	border-radius: 6px;
 
 	background-color: var(--purple);
 	color: var(--white);
@@ -124,9 +125,42 @@
 	text-shadow: 1px 1px black;
 }
 
-.recruitment-card {
-}
-
 .recruitment-card__inline-logo {
 	height: 40px;
+}
+
+.event-banner {
+	margin: 40px 0;
+	padding: 10px;
+	background-color: var(--purple);
+}
+
+.event-banner__event-details {
+	margin: 40px;
+}
+
+.event-banner__text {
+	margin: 0;
+	color: var(--white);
+	text-shadow: 1px 1px black;
+}
+
+.event-banner__text--large {
+	font-size: var(--large-text);
+}
+
+.event-banner__text--medium {
+	font-size: var(--medium-text);
+}
+
+.event-banner__button {
+	width: fit-content;
+	padding: 10px 20px;
+	margin: 10px auto;
+
+	border-radius: 6px;
+
+	background-color: var(--highlight);
+	box-shadow: 1px 1px black;
+	cursor: pointer;
 }

@@ -1,6 +1,12 @@
 :root {
 	--purple: rgb(47, 49, 141);
+	--highlight: rgb(244, 158, 76);
 	--white: rgb(245, 245, 255);
+
+	--medium-text: 16pt;
+	--large-text: 20pt;
+	--body-text: 12pt;
+	--small-text: 10pt;
 }
 
 /* Styles */
@@ -17,25 +23,36 @@
 	color: var(--purple);
 }
 
-h1 {
-}
-
-h2 {
-	font-size: 20pt;
+.large-text {
+	font-size: var(--large-text);
 	margin: 40px;
 }
 
-h3 {
-	font-size: 16pt;
+.medium-text {
+	font-size: var(--medium-text);
 	margin: 20px;
 }
 
-p {
-	font-size: 12pt;
+.body-text {
+	font-size: var(--body-text);
 }
 
 .subtle-text {
-	font-size: 10pt;
+	font-size: var(--small-text);
+}
+
+.alert-text {
+	font-size: var(--medium-text);
+	color: var(--highlight) !important;
+}
+
+.link-text {
+	color: blue;
+	text-decoration: underline;
+}
+
+.link-text:hover {
+	cursor: pointer;
 }
 
 /* Containers */
@@ -59,6 +76,11 @@ p {
 	border: 1pt solid var(--purple);
 }
 
-@media (max-width: 1199px) {}
+@media (max-width: 1199px) {
+	.content-column {
+		max-width: 800px;
+	}
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
