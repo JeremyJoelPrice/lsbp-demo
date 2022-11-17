@@ -30,6 +30,14 @@ h3 {
 	margin: 20px;
 }
 
+p {
+	font-size: 12pt;
+}
+
+.subtle-text {
+	font-size: 10pt;
+}
+
 /* Containers */
 
 .content-column {
@@ -37,3 +45,20 @@ h3 {
 	margin-right: auto;
 	max-width: 1200px;
 }
+
+.content-boxes-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.content-box {
+	height: 300px;
+	width: 500px;
+	margin: 50px;
+	border: 1pt solid var(--purple);
+}
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 768px) {}
