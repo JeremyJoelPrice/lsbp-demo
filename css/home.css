@@ -216,3 +216,38 @@
 	color: var(--black);
 	overflow-wrap: break-word;
 }
+
+.footer {
+	border-top: 4px solid var(--light-purple);
+	padding: 20px;
+}
+
+.footer__flex-row {
+	display: flex;
+}
+.footer__flex-row--space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__image {
+	width: 40px;
+	margin: 5px;
+}
+
+.footer__text {
+	text-align: left;
+	font-size: var(--medium-text);
+}
+
+.footer__text--small {
+	font-size: var(--body-text);
+}
+
+.footer__social-image {
+	width: 40px;
+}
+
+.footer__social-image--large {
+	width: 80px;
+}
