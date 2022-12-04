@@ -31,7 +31,7 @@ function handleResponse(request, callback) {
 	}
 }
 
-export const displayHtml = (html, targetElement="#main-destination") => {
+export const displayHtml = (html, targetElement = "#main-destination") => {
 	document.querySelector(targetElement).innerHTML = html;
 };
 

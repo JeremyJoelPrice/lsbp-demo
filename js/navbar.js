@@ -1,4 +1,10 @@
-import { ajaxUtils, displayHtml, getElementsOfClass, getFirstElementOfClass, loadSnippet } from "./ajax-utility.js";
+import {
+	ajaxUtils,
+	displayHtml,
+	getElementsOfClass,
+	getFirstElementOfClass,
+	loadSnippet
+} from "./ajax-utility.js";
 
 // load the navbar
 ajaxUtils.sendRequest("../html/navbar.html", (html) => {
